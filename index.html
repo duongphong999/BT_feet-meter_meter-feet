@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            border-collapse: collapse;
+        }
+        td, th{
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="">
+        <table>
+            <tr>
+                <th><label for="">Chuyển đổi từ Feet sang Meters: </label></th>
+                <td><input type="text" name="" placeholder="input foot" id="inputfoot"
+                        oninput="footToMeter(this.value) " onchange="footToMeter(this.value)"></td>
+                <td>
+                    <p > <span id="result"></span> (meter)</p>
+                </td>
+            </tr>
+            <tr>
+                <th><label for="">chuyển đổi từ meter sang feet: </label></th>
+                <td><input type="text" name="" placeholder="input meter" id="inputmeter"
+                        oninput="meterToFoot(this.value)" onchange=" meterToFoot(this.value)"></td>
+                <td>
+                    <p > <span id="result2"></span> (feet)</p>
+                </td>
+            </tr>
+        </table>
+
+    </form>
+
+
+
+    <script>
+
+        function footToMeter(foot) {
+            foot = document.getElementById('inputfoot').value;
+            let meter = 0.305 * foot;
+            document.getElementById('result').innerHTML = meter;
+
+        }
+        function meterToFoot(meter) {
+            meter = document.getElementById('inputmeter').value;
+            let foot = 3.279 * meter;
+            document.getElementById('result2').innerHTML = foot;
+        }
+
+
+    </script>
+</body>
+
+</html>
